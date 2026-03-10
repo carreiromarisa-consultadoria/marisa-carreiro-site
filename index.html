@@ -30,11 +30,6 @@ border-radius:20px;
 box-shadow:0 10px 30px rgba(0,0,0,0.05);
 }
 
-.logo{
-width:90px;
-margin-bottom:20px;
-}
-
 h1{
 font-size:40px;
 margin-bottom:10px;
@@ -58,19 +53,30 @@ font-size:14px;
 margin-top:60px;
 }
 
-button{
+.btn{
 background:#b08b57;
 color:white;
 border:none;
-padding:14px 22px;
+padding:16px 24px;
 border-radius:40px;
 font-size:16px;
 cursor:pointer;
+display:inline-block;
 margin-top:20px;
+text-decoration:none;
 }
 
-button:hover{
-opacity:0.9;
+.btn2{
+background:#fff;
+color:#222;
+border:1px solid #ddd;
+padding:16px 24px;
+border-radius:40px;
+font-size:16px;
+cursor:pointer;
+display:inline-block;
+margin-top:20px;
+text-decoration:none;
 }
 
 .service{
@@ -78,6 +84,7 @@ border:1px solid #eee;
 padding:25px;
 border-radius:15px;
 margin-top:20px;
+background:white;
 }
 
 .contact{
@@ -88,7 +95,15 @@ border-radius:20px;
 margin-top:60px;
 }
 
-a{
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:16px 20px;
+border-radius:50px;
+font-weight:bold;
 text-decoration:none;
 }
 
@@ -102,9 +117,7 @@ text-decoration:none;
 
 <div class="card">
 
-<img src="logo.png" class="logo">
-
-<h2>MARISA CARREIRO</h2>
+<h2>Marisa Carreiro</h2>
 
 <p class="subtitle">Consultoria em finanças pessoais</p>
 
@@ -115,20 +128,25 @@ Consultoria em finanças pessoais · Presencial ou online
 <h1>Consultoria em Finanças Pessoais</h1>
 
 <p>
-Organiza o teu dinheiro. Cria clareza nas tuas contas. Toma decisões financeiras com mais segurança.
+Organiza o teu dinheiro. Cria clareza nas tuas contas.  
+Toma decisões financeiras com mais segurança.
 </p>
 
 <p>
 A consultoria financeira permite analisar a tua realidade financeira, organizar o teu orçamento e construir um sistema simples e consistente para gerir o dinheiro.
 </p>
 
-<a href="https://wa.me/351936844029?text=Olá Marisa, vi a página de consultoria financeira e gostaria de obter mais informações. O meu objetivo principal é:" target="_blank">
-<button>Falar no WhatsApp</button>
+<a class="btn" href="https://wa.me/351936844029?text=Olá%20Marisa,%20vi%20a%20página%20de%20consultoria%20financeira%20e%20gostaria%20de%20obter%20mais%20informações.%20O%20meu%20objetivo%20principal%20é:" target="_blank">
+Falar no WhatsApp
+</a>
+
+<a class="btn2" href="#consultoria">
+Ver tipos de consultoria
 </a>
 
 </div>
 
-<div class="section">
+<div class="section" id="consultoria">
 
 <h2>Tipos de consultoria</h2>
 
@@ -145,9 +163,13 @@ Sessão individual focada na análise da tua situação financeira atual e na id
 <p><strong>O que vais ganhar</strong></p>
 
 <p>
-⟡ Clareza imediata  
+⟡ Clareza imediata<br>
 Vais perceber para onde vai o teu dinheiro e o que ajustar já este mês — sem culpa.
 </p>
+
+<a class="btn" href="https://wa.me/351936844029?text=Olá%20Marisa,%20tenho%20interesse%20na%20sessão%20de%201h%20de%20consultoria%20em%20finanças%20pessoais." target="_blank">
+Marcar sessão
+</a>
 
 </div>
 
@@ -169,16 +191,20 @@ Vais perceber para onde vai o teu dinheiro e o que ajustar já este mês — sem
 ✔️ Foco em resultados reais
 </p>
 
+<a class="btn" href="https://wa.me/351936844029?text=Olá%20Marisa,%20tenho%20interesse%20no%20programa%20de%203%20sessões%20de%20consultoria." target="_blank">
+Quero organizar as minhas finanças
+</a>
+
 </div>
 
 </div>
 
 <div class="section">
 
-<h2>Acompanhamento financeiro</h2>
+<h2>Acompanhamento</h2>
 
 <p>
-Nível estável de finanças depois da consultoria inicial.
+Nível estável de finanças depois da consultoria inicial em finanças pessoais.
 </p>
 
 <p>
@@ -259,9 +285,7 @@ Email: carreiromarisa@gmail.com
 
 </div>
 
-<div class="section">
-
-<p style="font-size:14px;color:#777">
+<p style="font-size:14px;color:#777;margin-top:40px">
 
 Tem em consideração que nestas sessões não é feito nenhum tipo de aconselhamento ou recomendação de investimento.  
 Para consultar a lista de pessoas e entidades habilitadas para o efeito, verifica o site da CMVM.
@@ -270,7 +294,9 @@ Para consultar a lista de pessoas e entidades habilitadas para o efeito, verific
 
 </div>
 
-</div>
+<a class="whatsapp" href="https://wa.me/351936844029" target="_blank">
+WhatsApp
+</a>
 
 </body>
 </html>
