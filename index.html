@@ -1,664 +1,418 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Consultoria em Finanças Pessoais | Marisa Carreiro</title>
-<meta name="description" content="Consultoria em finanças pessoais presencial ou online. Clareza, organização e estratégia para assumires o controlo do teu dinheiro.">
+
+<meta name="description" content="Consultoria em finanças pessoais presencial ou online. Organização financeira, estratégia e clareza nas tuas contas.">
 
 <style>
+
 :root{
-  --bg:#f6f4ef;
-  --card:#ffffff;
-  --text:#1f1f1f;
-  --muted:#6d6a64;
-  --gold:#b08b57;
-  --gold-dark:#8e6d41;
-  --line:#e8e1d7;
-  --dark:#171717;
+--bg:#f6f4ef;
+--card:#ffffff;
+--text:#1f1f1f;
+--muted:#6d6a64;
+--gold:#b08b57;
+--gold-dark:#8e6d41;
+--line:#e8e1d7;
+--dark:#171717;
 }
 
 *{
-  box-sizing:border-box;
-}
-
-html{
-  scroll-behavior:smooth;
+box-sizing:border-box;
 }
 
 body{
-  margin:0;
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
-  background:var(--bg);
-  color:var(--text);
-  line-height:1.6;
+margin:0;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+background:var(--bg);
+color:var(--text);
+line-height:1.6;
 }
 
 .wrap{
-  width:min(1020px, calc(100% - 32px));
-  margin:0 auto;
+width:min(1020px, calc(100% - 32px));
+margin:auto;
 }
 
 .hero{
-  padding:28px 0 22px;
+padding:28px 0 22px;
 }
 
 .hero-card{
-  background:var(--card);
-  border:1px solid var(--line);
-  border-radius:32px;
-  padding:28px;
-  box-shadow:0 12px 34px rgba(0,0,0,.05);
+background:var(--card);
+border:1px solid var(--line);
+border-radius:32px;
+padding:28px;
+box-shadow:0 12px 34px rgba(0,0,0,.05);
 }
 
 .brand{
-  display:flex;
-  align-items:center;
-  gap:16px;
-  padding-bottom:18px;
-  border-bottom:1px solid var(--line);
-  margin-bottom:20px;
+display:flex;
+align-items:center;
+gap:16px;
+padding-bottom:18px;
+border-bottom:1px solid var(--line);
+margin-bottom:20px;
 }
 
 .brand-logo{
-  width:86px;
-  height:86px;
-  flex:0 0 86px;
+width:90px;
 }
 
 .brand h2{
-  margin:0 0 4px;
-  font-size:20px;
+margin:0;
+font-size:22px;
 }
 
 .brand p{
-  margin:0;
-  color:var(--muted);
-  font-size:15px;
+margin:0;
+color:var(--muted);
+font-size:15px;
 }
 
 .pill{
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  border:1px solid #d9cfbf;
-  border-radius:999px;
-  padding:10px 16px;
-  color:#5b5348;
-  margin-bottom:22px;
-  background:#fbfaf8;
-  font-size:15px;
+display:inline-flex;
+align-items:center;
+gap:10px;
+border:1px solid #d9cfbf;
+border-radius:999px;
+padding:10px 16px;
+margin-bottom:22px;
+background:#fbfaf8;
+font-size:15px;
 }
 
 .dot{
-  width:10px;
-  height:10px;
-  border-radius:50%;
-  background:var(--gold);
-  display:inline-block;
+width:10px;
+height:10px;
+border-radius:50%;
+background:var(--gold);
 }
 
 h1{
-  font-size:clamp(40px, 8vw, 68px);
-  line-height:1.03;
-  margin:0 0 18px;
-  letter-spacing:-0.02em;
+font-size:clamp(40px,8vw,64px);
+margin:0 0 18px;
 }
 
 .lead{
-  font-size:clamp(19px, 2.8vw, 25px);
-  color:#393632;
-  margin-bottom:14px;
-  max-width:760px;
+font-size:22px;
+margin-bottom:14px;
 }
 
 .sublead{
-  color:var(--muted);
-  font-size:19px;
-  max-width:780px;
-  margin-bottom:26px;
+color:var(--muted);
+font-size:18px;
+margin-bottom:26px;
 }
 
 .actions{
-  display:flex;
-  gap:14px;
-  flex-wrap:wrap;
-  margin-top:10px;
+display:flex;
+gap:14px;
+flex-wrap:wrap;
 }
 
 .btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  min-height:56px;
-  padding:0 24px;
-  border-radius:999px;
-  text-decoration:none;
-  font-weight:700;
-  border:1px solid transparent;
-  transition:.2s ease;
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:16px 28px;
+border-radius:999px;
+text-decoration:none;
+font-weight:700;
 }
 
 .btn-primary{
-  background:var(--gold);
-  color:#111;
-}
-
-.btn-primary:hover{
-  background:var(--gold-dark);
-  color:#fff;
+background:var(--gold);
+color:#111;
 }
 
 .btn-secondary{
-  background:#fff;
-  color:#222;
-  border-color:#dbd2c5;
-}
-
-.btn-secondary:hover{
-  border-color:#c6b8a4;
+background:#fff;
+border:1px solid #dbd2c5;
+color:#222;
 }
 
 .quick{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:14px;
-  margin-top:24px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:14px;
+margin-top:24px;
 }
 
 .quick-card{
-  background:#fcfbf9;
-  border:1px solid var(--line);
-  border-radius:18px;
-  padding:18px;
-}
-
-.quick-card strong{
-  display:block;
-  margin-bottom:4px;
-  font-size:16px;
-}
-
-.quick-card span{
-  color:var(--muted);
-  font-size:15px;
+background:#fcfbf9;
+border:1px solid var(--line);
+border-radius:18px;
+padding:18px;
 }
 
 .section{
-  padding:30px 0;
-}
-
-.section h2{
-  font-size:clamp(28px, 4vw, 40px);
-  margin:0 0 14px;
-  letter-spacing:-0.01em;
-}
-
-.section-intro{
-  color:var(--muted);
-  margin-bottom:18px;
-  max-width:760px;
+padding:40px 0;
 }
 
 .grid-2{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:20px;
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
 }
 
 .service{
-  background:#fff;
-  border:1px solid var(--line);
-  border-radius:24px;
-  padding:24px;
-  box-shadow:0 10px 24px rgba(0,0,0,.04);
+background:#fff;
+border:1px solid var(--line);
+border-radius:24px;
+padding:24px;
 }
 
 .tag{
-  display:inline-block;
-  padding:7px 12px;
-  border-radius:999px;
-  background:#f8f1e8;
-  color:#7f6036;
-  font-size:13px;
-  font-weight:700;
-  margin-bottom:12px;
-}
-
-.service h3{
-  margin:0 0 10px;
-  font-size:27px;
-}
-
-.service p{
-  margin:0 0 12px;
-}
-
-details{
-  margin-top:12px;
-  border:1px solid var(--line);
-  border-radius:16px;
-  background:#fcfbf9;
-  padding:14px 16px;
-}
-
-summary{
-  cursor:pointer;
-  font-weight:700;
-}
-
-.benefit{
-  margin:10px 0;
-}
-
-.benefit strong{
-  display:block;
-}
-
-.method-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-}
-
-.step{
-  background:#fff;
-  border:1px solid var(--line);
-  border-radius:22px;
-  padding:22px;
-  box-shadow:0 8px 22px rgba(0,0,0,.03);
-}
-
-.step-no{
-  width:42px;
-  height:42px;
-  border-radius:50%;
-  background:#f5ebde;
-  color:#7f6036;
-  display:grid;
-  place-items:center;
-  font-weight:800;
-  margin-bottom:14px;
-}
-
-.about{
-  background:linear-gradient(180deg,#fff,#fcfbf9);
-  border:1px solid var(--line);
-  border-radius:26px;
-  padding:28px;
-}
-
-.about p{
-  max-width:760px;
-}
-
-.faq-item{
-  background:#fff;
-  border:1px solid var(--line);
-  border-radius:18px;
-  padding:18px;
-  margin-bottom:12px;
+background:#f8f1e8;
+color:#7f6036;
+font-size:13px;
+font-weight:700;
+padding:6px 12px;
+border-radius:999px;
+display:inline-block;
+margin-bottom:12px;
 }
 
 .contact{
-  background:var(--dark);
-  color:#fff;
-  border-radius:30px;
-  padding:30px;
-  display:grid;
-  grid-template-columns:1.3fr .7fr;
-  gap:22px;
-}
-
-.contact p,
-.contact li{
-  color:rgba(255,255,255,.88);
+background:var(--dark);
+color:#fff;
+border-radius:30px;
+padding:30px;
+display:grid;
+grid-template-columns:1.3fr .7fr;
+gap:22px;
 }
 
 .contact-card{
-  background:rgba(255,255,255,.05);
-  border:1px solid rgba(255,255,255,.1);
-  border-radius:20px;
-  padding:20px;
+background:rgba(255,255,255,.05);
+border-radius:20px;
+padding:20px;
 }
 
 .contact a{
-  color:#fff;
-  text-decoration:none;
-}
-
-.legal{
-  color:#77726b;
-  font-size:14px;
-  padding:12px 0 42px;
+color:#fff;
+text-decoration:none;
 }
 
 .sticky{
-  position:fixed;
-  right:16px;
-  bottom:16px;
-  z-index:30;
+position:fixed;
+right:16px;
+bottom:16px;
 }
 
 .sticky a{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  min-width:58px;
-  min-height:58px;
-  padding:0 18px;
-  border-radius:999px;
-  background:#25D366;
-  color:#fff;
-  text-decoration:none;
-  font-weight:800;
-  box-shadow:0 12px 26px rgba(37,211,102,.35);
-  font-size:15px;
+background:#25D366;
+color:#fff;
+padding:16px 22px;
+border-radius:999px;
+text-decoration:none;
+font-weight:700;
 }
 
-.footer-space{
-  height:40px;
+@media(max-width:760px){
+
+.quick,
+.grid-2,
+.contact{
+grid-template-columns:1fr;
 }
 
-@media (max-width:760px){
-  .hero-card{
-    padding:22px;
-  }
-
-  .brand{
-    align-items:flex-start;
-  }
-
-  .quick,
-  .grid-2,
-  .method-grid,
-  .contact{
-    grid-template-columns:1fr;
-  }
-
-  .actions .btn{
-    width:100%;
-  }
-
-  .brand-logo{
-    width:74px;
-    height:74px;
-    flex:0 0 74px;
-  }
+.brand-logo{
+width:70px;
 }
+
+}
+
 </style>
 </head>
+
 <body>
 
 <div class="sticky">
-  <a href="https://wa.me/351936844029?text=Olá%20Marisa,%20vi%20a%20página%20de%20consultoria%20financeira%20e%20gostaria%20de%20obter%20mais%20informações.%20O%20meu%20objetivo%20principal%20é%3A" target="_blank">WhatsApp</a>
+<a href="https://wa.me/351936844029" target="_blank">WhatsApp</a>
 </div>
 
 <header class="hero">
-  <div class="wrap">
-    <div class="hero-card">
 
-      <div class="brand">
+<div class="wrap">
 
-        <svg class="brand-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-label="Logotipo Marisa Carreiro">
-          <rect width="100" height="100" rx="22" fill="#ffffff"/>
-          <circle cx="50" cy="50" r="34" fill="none" stroke="#d8c7ad" stroke-width="2"/>
-          <path d="M34 66 C44 44, 60 38, 78 30 C69 47, 56 61, 38 72 Z" fill="#b08b57"/>
-          <path d="M46 68 L46 30 L53 30 L63 50 L63 30 L70 30 L70 68 L63 68 L53 48 L53 68 Z" fill="#b99463" opacity="0.95"/>
-          <text x="34" y="65" text-anchor="middle" font-size="42" font-family="Georgia, serif" fill="#c9b19a">M</text>
-        </svg>
+<div class="hero-card">
 
-        <div>
-          <h2>Marisa Carreiro</h2>
-          <p>Consultoria em finanças pessoais</p>
-        </div>
-      </div>
+<div class="brand">
 
-      <div class="pill">
-        <span class="dot"></span>
-        Consultoria em finanças pessoais · Presencial ou online
-      </div>
+<img src="logo-marisa.png" class="brand-logo" alt="Marisa Carreiro">
 
-      <h1>Consultoria em Finanças Pessoais</h1>
+<div>
+<h2>Marisa Carreiro</h2>
+<p>Consultoria em finanças pessoais</p>
+</div>
 
-      <p class="lead">
-        Organiza o teu dinheiro. Cria clareza nas tuas contas. Toma decisões financeiras com mais segurança.
-      </p>
+</div>
 
-      <p class="sublead">
-        A consultoria financeira permite analisar a tua realidade financeira, organizar o teu orçamento e construir um sistema simples e consistente para gerir o dinheiro.
-      </p>
+<div class="pill">
+<div class="dot"></div>
+Consultoria em finanças pessoais · Presencial ou online
+</div>
 
-      <div class="actions">
-        <a class="btn btn-primary" href="https://wa.me/351936844029?text=Olá%20Marisa,%20vi%20a%20página%20de%20consultoria%20financeira%20e%20gostaria%20de%20obter%20mais%20informações.%20O%20meu%20objetivo%20principal%20é%3A" target="_blank">💬 Falar no WhatsApp</a>
-        <a class="btn btn-secondary" href="#consultoria">Ver tipos de consultoria</a>
-      </div>
+<h1>Consultoria em Finanças Pessoais</h1>
 
-      <div class="quick">
-        <div class="quick-card">
-          <strong>Clareza</strong>
-          <span>Perceber para onde vai o teu dinheiro.</span>
-        </div>
-        <div class="quick-card">
-          <strong>Estrutura</strong>
-          <span>Organizar o orçamento de forma simples.</span>
-        </div>
-        <div class="quick-card">
-          <strong>Consistência</strong>
-          <span>Criar um sistema sustentável.</span>
-        </div>
-      </div>
+<p class="lead">
+Organiza o teu dinheiro. Cria clareza nas tuas contas.
+</p>
 
-    </div>
-  </div>
+<p class="sublead">
+A consultoria financeira permite analisar a tua realidade financeira,
+organizar o teu orçamento e criar um sistema simples para gerir o dinheiro.
+</p>
+
+<div class="actions">
+
+<a class="btn btn-primary" href="https://wa.me/351936844029">
+Falar no WhatsApp
+</a>
+
+<a class="btn btn-secondary" href="#consultoria">
+Ver consultoria
+</a>
+
+</div>
+
+<div class="quick">
+
+<div class="quick-card">
+<strong>Clareza</strong><br>
+Perceber para onde vai o dinheiro
+</div>
+
+<div class="quick-card">
+<strong>Estrutura</strong><br>
+Organizar o orçamento
+</div>
+
+<div class="quick-card">
+<strong>Consistência</strong><br>
+Criar um sistema sustentável
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </header>
 
 <section class="section">
-  <div class="wrap">
-    <div class="about">
-      <h2>Quem sou eu</h2>
-      <p>
-        Ajudo pessoas a ganhar clareza sobre o seu dinheiro e a organizar as suas finanças de forma simples, prática e consistente.
-      </p>
-      <p>
-        A organização financeira não é sobre restrição. É sobre liberdade de decisão, segurança e estrutura para viver com mais tranquilidade.
-      </p>
-    </div>
-  </div>
+
+<div class="wrap">
+
+<h2>Quem sou eu</h2>
+
+<p>
+Ajudo pessoas a ganhar clareza sobre o seu dinheiro e a organizar as suas finanças
+de forma simples, prática e consistente.
+</p>
+
+<p>
+A organização financeira não é restrição.
+É liberdade de decisão e segurança.
+</p>
+
+</div>
+
 </section>
 
 <section class="section" id="consultoria">
-  <div class="wrap">
-    <h2>Tipos de consultoria</h2>
-    <p class="section-intro">
-      Escolhe o formato mais adequado à tua fase financeira.
-    </p>
 
-    <div class="grid-2">
+<div class="wrap">
 
-      <article class="service">
-        <span class="tag">Sessão individual</span>
-        <h3>1 sessão de 1h</h3>
+<h2>Tipos de consultoria</h2>
 
-        <details>
-          <summary>Ver detalhes</summary>
-          <p><strong>O que será feito</strong></p>
-          <p>
-            Sessão individual focada na análise da tua situação financeira atual e na identificação de ajustes imediatos no teu orçamento.
-          </p>
+<div class="grid-2">
 
-          <div class="benefit">
-            <strong>⟡ Clareza imediata</strong>
-            <span>Vais perceber para onde vai o teu dinheiro e o que ajustar já este mês — sem culpa.</span>
-          </div>
-        </details>
+<div class="service">
 
-        <div class="actions">
-          <a class="btn btn-primary" href="https://wa.me/351936844029?text=Olá%20Marisa,%20tenho%20interesse%20na%20sessão%20de%201h%20de%20consultoria%20em%20finanças%20pessoais.%20O%20meu%20objetivo%20principal%20é%3A" target="_blank">Marcar sessão</a>
-        </div>
-      </article>
+<span class="tag">Sessão individual</span>
 
-      <article class="service">
-        <span class="tag">Programa estruturado</span>
-        <h3>3 sessões</h3>
+<h3>1 sessão</h3>
 
-        <details>
-          <summary>Ver detalhes</summary>
-          <p><strong>As 3 sessões</strong></p>
-          <p>
-            1h finanças pessoais + 40 min de análise e gatilhos + 1h finanças pessoais
-          </p>
+<p>
+Análise da situação financeira e ajustes imediatos no orçamento.
+</p>
 
-          <div class="benefit">
-            <strong>⟡ Clareza imediata</strong>
-            <span>Vais perceber para onde vai o teu dinheiro e o que ajustar já este mês — sem culpa.</span>
-          </div>
+<a class="btn btn-primary" href="https://wa.me/351936844029">
+Marcar sessão
+</a>
 
-          <div class="benefit">
-            <strong>◎ Sistema simples</strong>
-            <span>Orçamento prático, categorias claras e rotina leve — feita para durar.</span>
-          </div>
-
-          <div class="benefit">
-            <strong>↟ Estratégia com metas</strong>
-            <span>Objetivos reais (poupança, fundo de emergência, dívidas, organização) com passos concretos.</span>
-          </div>
-
-          <div class="benefit">
-            <strong>➡️ Personalização total</strong>
-          </div>
-
-          <div class="benefit">
-            <strong>✔️ Foco em resultados reais</strong>
-          </div>
-        </details>
-
-        <div class="actions">
-          <a class="btn btn-primary" href="https://wa.me/351936844029?text=Olá%20Marisa,%20tenho%20interesse%20no%20programa%20de%203%20sessões%20de%20consultoria%20em%20finanças%20pessoais.%20O%20meu%20objetivo%20principal%20é%3A" target="_blank">Quero organizar as minhas finanças</a>
-        </div>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap">
-    <article class="service">
-      <span class="tag">Continuidade</span>
-      <h3>Acompanhamento</h3>
-      <p>
-        Nível estável de finanças depois da consultoria inicial em finanças pessoais.
-      </p>
-      <p>
-        Acompanhamento mensal ou semanal, conforme necessidade.
-      </p>
-
-      <div class="actions">
-        <a class="btn btn-secondary" href="https://wa.me/351936844029?text=Olá%20Marisa,%20gostaria%20de%20saber%20mais%20sobre%20o%20acompanhamento%20financeiro.%20O%20meu%20objetivo%20principal%20é%3A" target="_blank">Pedir informações</a>
-      </div>
-    </article>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap">
-    <h2>O meu método</h2>
-    <p class="section-intro">simples • prático • consistente</p>
-
-    <div class="method-grid">
-      <article class="step">
-        <div class="step-no">1</div>
-        <strong>Análise detalhada do orçamento familiar</strong>
-        <p>
-          Mapeio receitas, despesas e padrões de consumo para encontrar oportunidades reais de otimização.
-        </p>
-      </article>
-
-      <article class="step">
-        <div class="step-no">2</div>
-        <strong>Acompanhamento mensal ou semanal</strong>
-        <p>
-          Garantimos consistência, ajustamos o plano e mantemos o foco no que traz resultado.
-        </p>
-      </article>
-
-      <article class="step">
-        <div class="step-no">3</div>
-        <strong>Solução à tua medida</strong>
-        <p>
-          Construímos um sistema adaptado ao teu estilo de vida e aos teus objetivos — sem fórmulas genéricas.
-        </p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap">
-    <h2>Perguntas frequentes</h2>
-
-    <div class="faq-item">
-      <strong>Quanto tempo dura a consultoria?</strong>
-      <p>
-        Depende do teu objetivo. Pode ser sessão pontual (diagnóstico + plano) ou acompanhamento mensal/semanal.
-      </p>
-    </div>
-
-    <div class="faq-item">
-      <strong>Online funciona tão bem como presencial?</strong>
-      <p>
-        Sim. A parte estratégica e prática funciona muito bem por videochamada. O presencial é ideal para quem prefere proximidade.
-      </p>
-    </div>
-
-    <div class="faq-item">
-      <strong>Como faço para começar?</strong>
-      <p>
-        Clica em “Falar no WhatsApp” e diz o teu objetivo principal. Eu respondo com os próximos passos.
-      </p>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap">
-    <div class="contact">
-      <div>
-        <h2>Contacto</h2>
-        <p>Vamos estruturar as tuas finanças?</p>
-        <p>Envia mensagem com:</p>
-        <p>
-          1) o teu objetivo principal<br>
-          2) online ou presencial<br>
-          3) acompanhamento mensal ou semanal
-        </p>
-
-        <div class="actions">
-          <a class="btn btn-primary" href="https://wa.me/351936844029?text=Olá%20Marisa,%20vi%20a%20página%20de%20consultoria%20financeira%20e%20gostaria%20de%20obter%20mais%20informações.%20O%20meu%20objetivo%20principal%20é%3A" target="_blank">💬 WhatsApp</a>
-          <a class="btn btn-secondary" href="mailto:carreiromarisa@gmail.com?subject=Pedido%20de%20informações%20-%20Consultoria%20Financeira&body=Olá%20Marisa,%0D%0A%0D%0AVi%20a%20página%20de%20consultoria%20financeira%20e%20gostaria%20de%20obter%20mais%20informações.%0D%0A%0D%0AO%20meu%20objetivo%20principal%20é:%20">✉️ Email</a>
-        </div>
-      </div>
-
-      <div class="contact-card">
-        <p><strong>Email</strong><br><a href="mailto:carreiromarisa@gmail.com">carreiromarisa@gmail.com</a></p>
-        <p><strong>WhatsApp</strong><br><a href="https://wa.me/351936844029" target="_blank">+351 936 844 029</a></p>
-        <p>WhatsApp é o mais rápido. Email também funciona.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="wrap legal">
-  <p>
-    Tem em consideração que nestas sessões não é feito nenhum tipo de aconselhamento ou recomendação de investimento.
-  </p>
-  <p>
-    Para consultar a lista de pessoas e entidades devidamente habilitadas para o efeito, por favor, verifica o site da CMVM.
-  </p>
 </div>
 
-<div class="footer-space"></div>
+<div class="service">
+
+<span class="tag">Programa</span>
+
+<h3>3 sessões</h3>
+
+<p>
+Organização financeira completa com plano estruturado.
+</p>
+
+<a class="btn btn-primary" href="https://wa.me/351936844029">
+Quero organizar as minhas finanças
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="wrap">
+
+<div class="contact">
+
+<div>
+
+<h2>Contacto</h2>
+
+<p>Vamos estruturar as tuas finanças?</p>
+
+<p>
+1) objetivo principal<br>
+2) online ou presencial<br>
+3) acompanhamento mensal ou semanal
+</p>
+
+<a class="btn btn-primary" href="https://wa.me/351936844029">
+Enviar WhatsApp
+</a>
+
+</div>
+
+<div class="contact-card">
+
+<p><strong>Email</strong><br>
+carreiromarisa@gmail.com</p>
+
+<p><strong>WhatsApp</strong><br>
++351 936 844 029</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
 
 </body>
 </html>
