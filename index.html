@@ -1,232 +1,79 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Consultoria em Finanças Pessoais | Marisa Carreiro</title>
 
-<meta name="description" content="Consultoria em finanças pessoais presencial ou online. Organização financeira, estratégia e clareza nas tuas contas.">
-
 <style>
 
-:root{
---bg:#f6f4ef;
---card:#ffffff;
---text:#1f1f1f;
---muted:#6d6a64;
---gold:#b08b57;
---gold-dark:#8e6d41;
---line:#e8e1d7;
---dark:#171717;
-}
-
-*{
-box-sizing:border-box;
-}
-
 body{
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial;
+background:#f6f4ef;
 margin:0;
-font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
-background:var(--bg);
-color:var(--text);
+color:#1f1f1f;
 line-height:1.6;
 }
 
-.wrap{
-width:min(1020px, calc(100% - 32px));
+.container{
+max-width:900px;
 margin:auto;
+padding:40px 20px;
 }
 
-.hero{
-padding:28px 0 22px;
-}
-
-.hero-card{
-background:var(--card);
-border:1px solid var(--line);
-border-radius:32px;
-padding:28px;
-box-shadow:0 12px 34px rgba(0,0,0,.05);
-}
-
-.brand{
-display:flex;
-align-items:center;
-gap:16px;
-padding-bottom:18px;
-border-bottom:1px solid var(--line);
+.logo{
+width:120px;
 margin-bottom:20px;
 }
 
-.brand-logo{
-width:90px;
-}
-
-.brand h2{
-margin:0;
-font-size:22px;
-}
-
-.brand p{
-margin:0;
-color:var(--muted);
-font-size:15px;
-}
-
-.pill{
-display:inline-flex;
-align-items:center;
-gap:10px;
-border:1px solid #d9cfbf;
-border-radius:999px;
-padding:10px 16px;
-margin-bottom:22px;
-background:#fbfaf8;
-font-size:15px;
-}
-
-.dot{
-width:10px;
-height:10px;
-border-radius:50%;
-background:var(--gold);
-}
-
 h1{
-font-size:clamp(40px,8vw,64px);
-margin:0 0 18px;
+font-size:46px;
+margin-bottom:20px;
 }
 
-.lead{
-font-size:22px;
-margin-bottom:14px;
-}
-
-.sublead{
-color:var(--muted);
-font-size:18px;
-margin-bottom:26px;
-}
-
-.actions{
-display:flex;
-gap:14px;
-flex-wrap:wrap;
+h2{
+margin-top:50px;
 }
 
 .btn{
-display:inline-flex;
-align-items:center;
-justify-content:center;
-padding:16px 28px;
-border-radius:999px;
+display:inline-block;
+background:#b08b57;
+color:white;
+padding:16px 26px;
+border-radius:40px;
 text-decoration:none;
-font-weight:700;
+margin-top:15px;
+font-weight:600;
 }
 
-.btn-primary{
-background:var(--gold);
-color:#111;
-}
-
-.btn-secondary{
-background:#fff;
-border:1px solid #dbd2c5;
-color:#222;
-}
-
-.quick{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:14px;
-margin-top:24px;
-}
-
-.quick-card{
-background:#fcfbf9;
-border:1px solid var(--line);
-border-radius:18px;
-padding:18px;
+.btn:hover{
+background:#8e6d41;
 }
 
 .section{
-padding:40px 0;
+margin-top:60px;
 }
 
-.grid-2{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:20px;
+.box{
+background:white;
+padding:25px;
+border-radius:16px;
+margin-top:20px;
 }
 
-.service{
-background:#fff;
-border:1px solid var(--line);
-border-radius:24px;
-padding:24px;
+ul{
+padding-left:20px;
 }
 
-.tag{
-background:#f8f1e8;
-color:#7f6036;
-font-size:13px;
-font-weight:700;
-padding:6px 12px;
-border-radius:999px;
-display:inline-block;
-margin-bottom:12px;
+li{
+margin-bottom:8px;
 }
 
-.contact{
-background:var(--dark);
-color:#fff;
-border-radius:30px;
-padding:30px;
-display:grid;
-grid-template-columns:1.3fr .7fr;
-gap:22px;
-}
-
-.contact-card{
-background:rgba(255,255,255,.05);
-border-radius:20px;
-padding:20px;
-}
-
-.contact a{
-color:#fff;
-text-decoration:none;
-}
-
-.sticky{
-position:fixed;
-right:16px;
-bottom:16px;
-}
-
-.sticky a{
-background:#25D366;
-color:#fff;
-padding:16px 22px;
-border-radius:999px;
-text-decoration:none;
-font-weight:700;
-}
-
-@media(max-width:760px){
-
-.quick,
-.grid-2,
-.contact{
-grid-template-columns:1fr;
-}
-
-.brand-logo{
-width:70px;
-}
-
+.footer{
+margin-top:60px;
+font-size:14px;
+color:#6d6a64;
 }
 
 </style>
@@ -234,135 +81,137 @@ width:70px;
 
 <body>
 
-<div class="sticky">
-<a href="https://wa.me/351936844029" target="_blank">WhatsApp</a>
-</div>
+<div class="container">
 
-<header class="hero">
+<img src="logo-marisa.png" class="logo">
 
-<div class="wrap">
+<h1>CONSULTORIA EM FINANÇAS PESSOAIS</h1>
 
-<div class="hero-card">
+<p><strong>Clareza, organização e estratégia para assumires o controlo do teu dinheiro.</strong></p>
 
-<div class="brand">
-
-<img src="logo-marisa.png" class="brand-logo" alt="Marisa Carreiro">
-
-<div>
-<h2>Marisa Carreiro</h2>
-<p>Consultoria em finanças pessoais</p>
-</div>
-
-</div>
-
-<div class="pill">
-<div class="dot"></div>
-Consultoria em finanças pessoais · Presencial ou online
-</div>
-
-<h1>Consultoria em Finanças Pessoais</h1>
-
-<p class="lead">
-Organiza o teu dinheiro. Cria clareza nas tuas contas.
+<p>
+A consultoria financeira ajuda-te a perceber para onde vai realmente o teu dinheiro, organizar as tuas contas e construir um sistema financeiro simples e sustentável.
 </p>
 
-<p class="sublead">
-A consultoria financeira permite analisar a tua realidade financeira,
-organizar o teu orçamento e criar um sistema simples para gerir o dinheiro.
+<p>
+Sem fórmulas genéricas.<br>
+Sem julgamentos.
 </p>
 
-<div class="actions">
+<p>
+Apenas clareza, estrutura e decisões financeiras conscientes.
+</p>
 
-<a class="btn btn-primary" href="https://wa.me/351936844029">
+<p>📍 Disponível online ou presencial</p>
+
+<a class="btn" href="https://wa.me/351936844029" target="_blank">
 Falar no WhatsApp
 </a>
 
-<a class="btn btn-secondary" href="#consultoria">
-Ver consultoria
-</a>
+<div class="section">
+
+<h2>Para quem é esta consultoria</h2>
+
+<p>Esta consultoria é para quem:</p>
+
+<ul>
+<li>sente que o dinheiro desaparece ao longo do mês</li>
+<li>quer organizar melhor as suas contas</li>
+<li>precisa de um sistema simples para gerir o dinheiro</li>
+<li>quer tomar decisões financeiras com mais segurança</li>
+<li>quer construir estabilidade financeira</li>
+</ul>
 
 </div>
 
-<div class="quick">
-
-<div class="quick-card">
-<strong>Clareza</strong><br>
-Perceber para onde vai o dinheiro
-</div>
-
-<div class="quick-card">
-<strong>Estrutura</strong><br>
-Organizar o orçamento
-</div>
-
-<div class="quick-card">
-<strong>Consistência</strong><br>
-Criar um sistema sustentável
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</header>
-
-<section class="section">
-
-<div class="wrap">
-
-<h2>Quem sou eu</h2>
-
-<p>
-Ajudo pessoas a ganhar clareza sobre o seu dinheiro e a organizar as suas finanças
-de forma simples, prática e consistente.
-</p>
-
-<p>
-A organização financeira não é restrição.
-É liberdade de decisão e segurança.
-</p>
-
-</div>
-
-</section>
-
-<section class="section" id="consultoria">
-
-<div class="wrap">
+<div class="section">
 
 <h2>Tipos de consultoria</h2>
 
-<div class="grid-2">
+<div class="box">
 
-<div class="service">
+<h3>Sessão de diagnóstico financeiro</h3>
 
-<span class="tag">Sessão individual</span>
+<p>1 sessão • 1 hora</p>
 
-<h3>1 sessão</h3>
+<p>Uma sessão focada em perceber a tua realidade financeira atual.</p>
+
+<p>Durante esta sessão vamos:</p>
+
+<ul>
+<li>analisar as tuas receitas e despesas</li>
+<li>perceber para onde vai realmente o dinheiro</li>
+<li>identificar padrões financeiros</li>
+<li>definir ajustes imediatos no teu orçamento</li>
+</ul>
+
+<h3>O que vais ganhar</h3>
+
+<p><strong>⟡ Clareza imediata</strong></p>
 
 <p>
-Análise da situação financeira e ajustes imediatos no orçamento.
+Vais perceber para onde vai o teu dinheiro e o que ajustar já este mês — sem culpa e sem complicações.
 </p>
 
-<a class="btn btn-primary" href="https://wa.me/351936844029">
+<a class="btn" href="https://wa.me/351936844029">
 Marcar sessão
 </a>
 
 </div>
 
-<div class="service">
+<div class="box">
 
-<span class="tag">Programa</span>
+<h3>Consultoria financeira estruturada</h3>
 
-<h3>3 sessões</h3>
+<p><strong>Programa de organização financeira</strong></p>
+
+<p>3 sessões</p>
+
+<p>Ideal para quem quer organizar as finanças de forma consistente e criar um sistema financeiro que funcione no dia-a-dia.</p>
+
+<h4>Estrutura das sessões</h4>
 
 <p>
-Organização financeira completa com plano estruturado.
+Sessão 1 – Finanças pessoais (1h)<br>
+Análise completa da tua realidade financeira.
 </p>
 
-<a class="btn btn-primary" href="https://wa.me/351936844029">
+<p>
+Sessão 2 – Análise aprofundada (40 min)<br>
+Identificação de padrões financeiros e decisões que precisam de ser ajustadas.
+</p>
+
+<p>
+Sessão 3 – Finanças pessoais (1h)<br>
+Construção do teu sistema financeiro e estratégia.
+</p>
+
+<h3>O que vais ganhar</h3>
+
+<p><strong>⟡ Clareza imediata</strong></p>
+
+<p>Perceber exatamente para onde vai o teu dinheiro.</p>
+
+<p><strong>◎ Sistema simples</strong></p>
+
+<p>Um orçamento prático, categorias claras e uma rotina financeira sustentável.</p>
+
+<p><strong>↟ Estratégia com metas</strong></p>
+
+<ul>
+<li>fundo de emergência</li>
+<li>organização financeira</li>
+<li>gestão de despesas</li>
+<li>estabilidade financeira</li>
+</ul>
+
+<p><strong>➡️ Personalização total</strong></p>
+
+<p>O sistema é construído de acordo com a tua realidade financeira.</p>
+
+<p><strong>✔️ Foco em resultados reais</strong></p>
+
+<a class="btn" href="https://wa.me/351936844029">
 Quero organizar as minhas finanças
 </a>
 
@@ -370,49 +219,132 @@ Quero organizar as minhas finanças
 
 </div>
 
+<div class="section">
+
+<h2>Acompanhamento financeiro</h2>
+
+<p>
+Depois da fase inicial de organização, podes manter estabilidade e consistência financeira com acompanhamento.
+</p>
+
+<p>Disponível em:</p>
+
+<ul>
+<li>acompanhamento mensal</li>
+<li>acompanhamento semanal</li>
+</ul>
+
+<p>Este acompanhamento permite:</p>
+
+<ul>
+<li>ajustar decisões financeiras ao longo do tempo</li>
+<li>manter consistência</li>
+<li>evitar regressar a padrões antigos</li>
+<li>consolidar os resultados alcançados</li>
+</ul>
+
 </div>
 
-</section>
+<div class="section">
 
-<section class="section">
+<h2>O meu método</h2>
 
-<div class="wrap">
+<p>simples • prático • consistente</p>
 
-<div class="contact">
+<p><strong>PASSO 1</strong></p>
 
-<div>
+<p>Análise detalhada do orçamento familiar</p>
+
+<p>
+Mapeio receitas, despesas e padrões de consumo para identificar oportunidades reais de melhoria.
+</p>
+
+<p><strong>PASSO 2</strong></p>
+
+<p>Acompanhamento</p>
+
+<p>
+Ajustamos decisões financeiras e garantimos consistência ao longo do tempo.
+</p>
+
+<p><strong>PASSO 3</strong></p>
+
+<p>Sistema financeiro à tua medida</p>
+
+<p>
+Construímos um sistema adaptado ao teu estilo de vida e objetivos.
+</p>
+
+<p>Sem fórmulas genéricas.</p>
+
+</div>
+
+<div class="section">
+
+<h2>Perguntas frequentes</h2>
+
+<p><strong>Quanto tempo dura a consultoria?</strong></p>
+
+<p>
+Depende do teu objetivo. Pode ser uma sessão pontual ou acompanhamento mensal/semanal.
+</p>
+
+<p><strong>Online funciona tão bem como presencial?</strong></p>
+
+<p>
+Sim. A parte estratégica e prática funciona muito bem por videochamada.  
+O presencial é ideal para quem prefere maior proximidade.
+</p>
+
+<p><strong>Como posso começar?</strong></p>
+
+<p>
+Clica no botão WhatsApp e envia:
+</p>
+
+<ul>
+<li>o teu objetivo principal</li>
+<li>se preferes online ou presencial</li>
+<li>se procuras sessão única ou acompanhamento</li>
+</ul>
+
+</div>
+
+<div class="section">
 
 <h2>Contacto</h2>
 
 <p>Vamos estruturar as tuas finanças?</p>
 
+<p>Envia mensagem com:</p>
+
 <p>
-1) objetivo principal<br>
-2) online ou presencial<br>
-3) acompanhamento mensal ou semanal
+1️⃣ objetivo principal<br>
+2️⃣ online ou presencial<br>
+3️⃣ sessão única ou acompanhamento
 </p>
 
-<a class="btn btn-primary" href="https://wa.me/351936844029">
-Enviar WhatsApp
-</a>
+<p>
+💬 WhatsApp<br>
+📧 Email — carreiromarisa@gmail.com<br>
+📸 Instagram
+</p>
 
 </div>
 
-<div class="contact-card">
+<div class="footer">
 
-<p><strong>Email</strong><br>
-carreiromarisa@gmail.com</p>
+<p>
+Nas sessões de consultoria não é realizado qualquer tipo de aconselhamento ou recomendação de investimento.
+</p>
 
-<p><strong>WhatsApp</strong><br>
-+351 936 844 029</p>
-
-</div>
-
-</div>
+<p>
+Para consultar a lista de pessoas e entidades devidamente habilitadas para esse efeito, consulta o site da CMVM.
+</p>
 
 </div>
 
-</section>
+</div>
 
 </body>
 </html>
